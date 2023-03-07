@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Chatbot beta",
+  "version": "1.0.0_beta",
+  "description": "Extensión de un chatbot para Opera",
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "popup.js",
+        "api.js",
+        "Chatbot.php"
+		"background.js"
+      ],
+      "matches": ["https://*/*"]
+    }
+  ],
+  "action": {
+    "default_title": "Chatbot",
+    "default_popup": "popup.html"
+  }
+}
